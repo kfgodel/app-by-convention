@@ -32,6 +32,7 @@
   </repositories>
 
   <properties>
+    <version.webbyconvention>0.2-SNAPSHOT</version.webbyconvention>
     <version.ateamhibernate>0.1-SNAPSHOT</version.ateamhibernate>
     <version.bean2bean>1.1.4</version.bean2bean>
     <version.groovy>2.1.5</version.groovy>
@@ -40,6 +41,20 @@
 
 
   <dependencies>
+
+    <!-- Allow dependency injection -->
+    <dependency>
+      <groupId>ar.com.kfgodel</groupId>
+      <artifactId>dependency-by-convention</artifactId>
+      <version>0.1-SNAPSHOT</version>
+    </dependency>
+
+    <!-- Simplified web container -->
+    <dependency>
+      <groupId>ar.com.kfgodel</groupId>
+      <artifactId>web-by-convention</artifactId>
+      <version>${version.webbyconvention}</version>
+    </dependency>
 
     <!-- Programmatic hibernate -->
     <dependency>
@@ -62,7 +77,7 @@
       <version>${version.diamond}</version>
     </dependency>
 
-    <!-- Follow knwon conventions -->
+    <!-- Follow known conventions -->
     <dependency>
       <groupId>ar.com.kfgodel</groupId>
       <artifactId>by-convention</artifactId>
