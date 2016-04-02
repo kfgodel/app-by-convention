@@ -38,14 +38,14 @@ public class ApplicationOperationNode implements ApplicationOperation {
 
   private HibernateOrm getOrm() {
     if (orm == null) {
-      orm = injector.getImplementationFor(HibernateOrm.class);
+      orm = injector.getImplementationFor(HibernateOrm.class).get();
     }
     return orm;
   }
 
   private TypeTransformer getTransformer() {
     if (transformer == null) {
-      transformer = injector.getImplementationFor(TypeTransformer.class);
+      transformer = injector.getImplementationFor(TypeTransformer.class).get();
     }
     return transformer;
   }
