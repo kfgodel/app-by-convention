@@ -37,6 +37,10 @@
     <version.bean2bean>1.1.4</version.bean2bean>
     <version.groovy>2.1.5</version.groovy>
     <version.diamond>1.0.1-SNAPSHOT</version.diamond>
+    <version.injector>0.1-SNAPSHOT</version.injector>
+    <version.transformer>0.1-SNAPSHOT</version.transformer>
+    <version.persistable-transformers>0.1-SNAPSHOT</version.persistable-transformers>
+    <version.convention>0.1-SNAPSHOT</version.convention>
   </properties>
 
 
@@ -46,7 +50,7 @@
     <dependency>
       <groupId>ar.com.kfgodel</groupId>
       <artifactId>dependency-by-convention</artifactId>
-      <version>0.1-SNAPSHOT</version>
+      <version>${version.injector}</version>
     </dependency>
 
     <!-- Simplified web container -->
@@ -67,7 +71,14 @@
     <dependency>
       <groupId>ar.com.kfgodel</groupId>
       <artifactId>transform-by-convention</artifactId>
-      <version>0.1-SNAPSHOT</version>
+      <version>${version.transformer}</version>
+    </dependency>
+
+    <!-- Additional persistable transformers for converting persitables into TOs -->
+    <dependency>
+      <groupId>ar.com.kfgodel</groupId>
+      <artifactId>app-persistable-transformers</artifactId>
+      <version>${version.persistable-transformers}</version>
     </dependency>
 
     <!-- Better reflection -->
@@ -81,7 +92,7 @@
     <dependency>
       <groupId>ar.com.kfgodel</groupId>
       <artifactId>by-convention</artifactId>
-      <version>0.1-SNAPSHOT</version>
+      <version>${version.convention}</version>
     </dependency>
 
     <!-- Spec for testing -->
