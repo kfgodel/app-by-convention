@@ -8,14 +8,14 @@ import ar.com.kfgodel.appbyconvention.operation.api.chains.ChainedTransactionOpe
 import ar.com.kfgodel.dependencies.api.DependencyInjector;
 import ar.com.kfgodel.dependencies.impl.DependencyInjectorImpl;
 import ar.com.kfgodel.diamond.api.types.reference.ReferenceOf;
+import ar.com.kfgodel.orm.api.HibernateOrm;
+import ar.com.kfgodel.orm.api.SessionContext;
+import ar.com.kfgodel.orm.api.TransactionContext;
+import ar.com.kfgodel.orm.api.operations.SessionOperation;
+import ar.com.kfgodel.orm.api.operations.TransactionOperation;
 import ar.com.kfgodel.transformbyconvention.api.TypeTransformer;
 import ar.com.kfgodel.transformbyconvention.impl.B2BTransformer;
 import ar.com.kfgodel.transformbyconvention.impl.config.TransformerConfigurationByConvention;
-import ar.com.tenpines.orm.api.HibernateOrm;
-import ar.com.tenpines.orm.api.SessionContext;
-import ar.com.tenpines.orm.api.TransactionContext;
-import ar.com.tenpines.orm.api.operations.SessionOperation;
-import ar.com.tenpines.orm.api.operations.TransactionOperation;
 import org.assertj.core.util.Lists;
 import org.junit.runner.RunWith;
 

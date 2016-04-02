@@ -2,7 +2,7 @@ package ar.com.kfgodel.appbyconvention.operation.api.chains;
 
 import ar.com.kfgodel.appbyconvention.operation.api.chains.session.SessionContinuator;
 import ar.com.kfgodel.appbyconvention.operation.api.chains.session.SessionTerminator;
-import ar.com.tenpines.orm.api.operations.SessionOperation;
+import ar.com.kfgodel.orm.api.operations.SessionOperation;
 
 import java.lang.reflect.Type;
 import java.util.function.Function;

@@ -1,7 +1,7 @@
 package ar.com.kfgodel.appbyconvention.operation.impl.chains;
 
 import ar.com.kfgodel.appbyconvention.operation.api.chains.ChainedTransactionOperation;
-import ar.com.tenpines.orm.api.operations.TransactionOperation;
+import ar.com.kfgodel.orm.api.operations.TransactionOperation;
 
 import java.lang.reflect.Type;
 import java.util.function.Function;

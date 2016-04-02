@@ -6,8 +6,8 @@ import ar.com.kfgodel.appbyconvention.operation.api.chains.TransactionScopedOper
 import ar.com.kfgodel.appbyconvention.operation.impl.chains.SessionScopedOperationNode;
 import ar.com.kfgodel.appbyconvention.operation.impl.chains.TransactionScopedOperationNode;
 import ar.com.kfgodel.dependencies.api.DependencyInjector;
+import ar.com.kfgodel.orm.api.HibernateOrm;
 import ar.com.kfgodel.transformbyconvention.api.TypeTransformer;
-import ar.com.tenpines.orm.api.HibernateOrm;
 
 /**
  * This type implements the application operation based on the application injector to retrieve the dependencies

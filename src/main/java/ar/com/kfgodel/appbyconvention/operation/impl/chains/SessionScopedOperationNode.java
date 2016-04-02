@@ -4,7 +4,7 @@ import ar.com.kfgodel.appbyconvention.operation.api.chains.ChainedSessionOperati
 import ar.com.kfgodel.appbyconvention.operation.api.chains.SessionScopedOperation;
 import ar.com.kfgodel.appbyconvention.operation.impl.comphelp.SessionApplierFunction;
 import ar.com.kfgodel.appbyconvention.operation.impl.comphelp.TransformerFunction;
-import ar.com.tenpines.orm.api.operations.SessionOperation;
+import ar.com.kfgodel.orm.api.operations.SessionOperation;
 
 import java.lang.reflect.Type;
 import java.util.function.BiFunction;

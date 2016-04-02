@@ -1,7 +1,7 @@
 package ar.com.kfgodel.appbyconvention.operation.api.chains.session;
 
 import ar.com.kfgodel.appbyconvention.operation.api.chains.ChainedSessionOperation;
-import ar.com.tenpines.orm.api.operations.SessionOperation;
+import ar.com.kfgodel.orm.api.operations.SessionOperation;
 
 import java.util.function.Supplier;
 
