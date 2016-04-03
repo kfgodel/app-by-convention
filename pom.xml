@@ -58,6 +58,17 @@
       <groupId>ar.com.kfgodel</groupId>
       <artifactId>web-by-convention</artifactId>
       <version>${version.webbyconvention}</version>
+      <exclusions>
+        <exclusion>
+          <!-- Conflictua con la version de guice (que tiene otras coordenadas) -->
+          <groupId>org.glassfish.hk2.external</groupId>
+          <artifactId>javax.inject</artifactId>
+        </exclusion>
+        <exclusion>
+          <groupId>org.glassfish.hk2.external</groupId>
+          <artifactId>aopalliance-repackaged</artifactId>
+        </exclusion>
+      </exclusions>
     </dependency>
 
     <!-- Programmatic hibernate -->
