@@ -2,6 +2,7 @@ package ar.com.kfgodel.appbyconvention.operation;
 
 import ar.com.dgarcia.javaspec.api.JavaSpec;
 import ar.com.dgarcia.javaspec.api.JavaSpecRunner;
+import ar.com.dgarcia.javaspec.api.variable.Variable;
 import ar.com.kfgodel.appbyconvention.operation.api.ApplicationOperation;
 import ar.com.kfgodel.appbyconvention.operation.api.chains.ChainedSessionOperation;
 import ar.com.kfgodel.appbyconvention.operation.api.chains.ChainedTransactionOperation;
@@ -152,6 +153,16 @@ public class ApplicationOperationTest extends JavaSpec<AppTestContext> {
             assertThat(extendedChain).isNotSameAs(context().sessionChain());
           });
 
+          it("completes the chain with a final action", () -> {
+            Variable<Integer> result = Variable.of(0);
+
+            context().sessionChain().useIn((previousValue) -> {
+              result.set(previousValue[0]);
+            });
+
+            assertThat(result.get()).isEqualTo(3);
+          });
+
           it("completes the chain and gets its result when a final map is done", () -> {
             Integer result = context().sessionChain().map((previousValue) -> {
               return previousValue[0] + 1;
@@ -284,6 +295,16 @@ public class ApplicationOperationTest extends JavaSpec<AppTestContext> {
 
             assertThat(extendedChain).isNotNull();
             assertThat(extendedChain).isNotSameAs(context().transactionChain());
+          });
+
+          it("completes the chain with a final action", () -> {
+            Variable<Integer> result = Variable.of(0);
+
+            context().transactionChain().useIn((previousValue) -> {
+              result.set(previousValue[0]);
+            });
+
+            assertThat(result.get()).isEqualTo(3);
           });
 
           it("completes the chain and gets its result when a final map is done", () -> {
