@@ -1,5 +1,6 @@
 package ar.com.kfgodel.appbyconvention.operation.api.chains.session;
 
+import ar.com.kfgodel.appbyconvention.operation.api.chains.common.ActionTerminator;
 import ar.com.kfgodel.appbyconvention.operation.api.chains.common.ConversionTerminator;
 import ar.com.kfgodel.orm.api.operations.SessionOperation;
 
@@ -12,7 +13,7 @@ import java.util.function.Function;
  * <p>
  * Created by kfgodel on 25/03/16.
  */
-public interface SessionTerminator<I1> extends ConversionTerminator<I1> {
+public interface SessionTerminator<I1> extends ConversionTerminator<I1>, ActionTerminator<I1> {
 
   /**
    * Adds the given action to the chain, as the final action, and executes the chain in the session.
