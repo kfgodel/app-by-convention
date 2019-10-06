@@ -16,11 +16,12 @@
 
   <name>App By Convention</name>
   <description>Project to define application parts that can be combined to define an application with minimum configuration code</description>
+  <url>https://github.com/kfgodel/app-by-convention</url>
 
   <scm>
-    <connection>scm:git:ssh://github.com/kfgodel/app-by-convention.git</connection>
     <developerConnection>scm:git:ssh://github.com/kfgodel/app-by-convention.git</developerConnection>
-    <url>https://github.com/kfgodel/app-by-convention</url>
+    <connection>${project.scm.developerConnection}</connection>
+    <url>${project.url}</url>
   </scm>
 
   <repositories>
@@ -32,6 +33,9 @@
   </repositories>
 
   <properties>
+    <!-- Sonar properties to prevent unintentional id changes (Reference: https://docs.sonarqube.org/latest/analysis/analysis-parameters/) -->
+    <sonar.projectKey>ar.com.kfgodel:app-by-convention</sonar.projectKey>
+
     <version.webbyconvention>0.2-SNAPSHOT</version.webbyconvention>
     <version.hibernatebyconvention>0.1-SNAPSHOT</version.hibernatebyconvention>
     <version.bean2bean>1.1.4</version.bean2bean>
